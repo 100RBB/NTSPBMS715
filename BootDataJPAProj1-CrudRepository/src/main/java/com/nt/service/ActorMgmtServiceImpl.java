@@ -83,6 +83,9 @@ public String registerActorsGroup(List<Actor> list) {
 		  return opt;
 		  //d
 	}
+	public Optional<Actor> fetchActorById4(int aid) {
+		Optional<Actor> opt=actorRepo.findById(aid);
+		  return opt;}
 	
 	/*
 	 * @Override public Actor showActorById(int aid) { Optional<Actor>
