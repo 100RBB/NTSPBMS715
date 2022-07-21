@@ -76,22 +76,18 @@ public String registerActorsGroup(List<Actor> list) {
 	public Optional<Actor> fetchActorById(int aid) {
 		Optional<Actor> opt=actorRepo.findById(aid);
 		  return opt;
+		  //d
 	}
 	
-	@Override
-	public Actor showActorById(int aid) {
-		Optional<Actor> opt=actorRepo.findById(aid);
-		if(opt.isPresent())
-			return  opt.get();
-		else
-			throw  new IllegalArgumentException("Actor not found");
-	}
-	
-	@Override
-	public Actor showActorById(int aid) {
-		Optional<Actor> opt=actorRepo.findById(aid);
-		return opt.orElseThrow(()->new IllegalArgumentException("Actor not found"));
-	}
+	/*
+	 * @Override public Actor showActorById(int aid) { Optional<Actor>
+	 * opt=actorRepo.findById(aid); if(opt.isPresent()) return opt.get(); else throw
+	 * new IllegalArgumentException("Actor not found"); }
+	 * 
+	 * @Override public Actor showActorById(int aid) { Optional<Actor>
+	 * opt=actorRepo.findById(aid); return opt.orElseThrow(()->new
+	 * IllegalArgumentException("Actor not found")); }
+	 */
 	
 	@Override
 	public Actor showActorById(int aid) {
